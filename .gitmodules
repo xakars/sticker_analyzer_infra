@@ -1,0 +1,6 @@
+[submodule "label_analyzer"]
+	path = label_analyzer
+	url = git@github.com:xakars/label_analyzer.git
+[submodule "ocr_padd"]
+	path = ocr_padd
+	url = git@github.com:xakars/ocr_padd.git

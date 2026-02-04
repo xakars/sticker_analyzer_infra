@@ -1,0 +1,30 @@
+services:
+  ocr_service:
+    build:
+      context: ./ocr_padd
+      dockerfile: Dockerfile
+    container_name: ocr_fastapi
+    env_file:
+      - ./ocr_padd/.env
+    ports:
+      - "8001:8001"
+    volumes:
+      - shared_ocr_data:/app/temp_ocr_storage
+    restart: unless-stopped
+
+  llm_service:
+    build:
+      context: ./label_analyzer
+      dockerfile: Dockerfile
+    container_name: llm_fastapi
+    env_file:
+      - ./label_analyzer/.env
+    ports:
+      - "8082:8082"
+    volumes:
+      - shared_ocr_data:/app/temp_ocr_storage
+    depends_on:
+      - ocr_service
+    restart: unless-stopped
+volumes:
+  shared_ocr_data:
