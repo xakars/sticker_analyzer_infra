@@ -46,3 +46,4 @@ p.s. временно создаем пустую
 ```bash
 docker-compose up --build
 ```
+API будет доступен по адресу: http://0.0.0.0:8082/api/docs
