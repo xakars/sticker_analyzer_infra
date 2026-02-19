@@ -52,3 +52,7 @@ p.s. временно создаем пустую
 docker-compose up --build
 ```
 API будет доступен по адресу: http://0.0.0.0:8082/api/docs
+
+### Пример работы: 
+<img width="1280" height="856" alt="image" src="https://github.com/user-attachments/assets/b078e17f-dcd9-4fe7-8551-404c7f983527" />
+
