@@ -4,3 +4,6 @@
 [submodule "ocr_padd"]
 	path = ocr_padd
 	url = git@github.com:xakars/ocr_padd.git
+[submodule "gpu-ocr-padd"]
+	path = gpu-ocr-padd
+	url = git@github.com:xakars/gpu-ocr-padd.git
